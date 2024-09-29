@@ -1,0 +1,177 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-image: url('https://pixeljoint.com/files/icons/full/nightsky.png');
+    background-size: cover; 
+    background-position: center; 
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    animation: fadeIn 1s ease-in;
+}
+
+.container {
+    text-align: center;
+}
+
+.card {
+    background: #000;
+    border-radius: 20px;
+    padding: 40px;
+    position: relative;
+    animation: slideIn 1s ease-in-out;
+    overflow: hidden;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+.card-title {
+    font-size: 3em;
+    font-family: 'Honk', sans-serif; /* Ensure the font is correctly loaded */
+    margin-bottom: 90px; /* Fixed spacing issue */
+    color: #FFD700;
+    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.8);
+    animation: fadeInUp 2s ease-in-out;
+}
+
+.animation-container {
+    position: relative;
+    height: 200px;
+}
+
+.star {
+    position: absolute;
+    background-image: url('https://png.pngtree.com/png-clipart/20220706/ourmid/pngtree-awesome-star-pixel-art-illustration-png-image_5710628.png'); /* Replace with your valid image URL */
+    background-size: contain; 
+    background-repeat: no-repeat; 
+    animation: twinkle 1.5s infinite alternate;
+}
+
+.star:nth-child(1) {
+    width: 20px;
+    height: 15px;
+    top: 10%;
+    left: 20%;
+    animation-delay: 0.2s;
+}
+
+.star:nth-child(2) {
+    width: 25px;
+    height: 25px;
+    top: 40%;
+    left: 50%;
+    animation-delay: 0.4s;
+}
+
+.star:nth-child(3) {
+    width: 20px;
+    height: 20px;
+    top: 20%;
+    left: 70%;
+    animation-delay: 0.6s;
+}
+
+.star:nth-child(4) {
+    width: 30px;
+    height: 30px;
+    top: 60%;
+    left: 30%;
+    animation-delay: 0.8s;
+}
+
+.star:nth-child(5) {
+    width: 10px;
+    height: 10px;
+    top: 80%;
+    left: 80%;
+    animation-delay: 1s;
+}
+
+@keyframes twinkle {
+    0% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1.5);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.message {
+    font-size: 1.5em;
+    font-family: 'Bangers', cursive; 
+    letter-spacing: 1px;
+    color: #FFD700;
+    margin: 20px 0;
+    animation: fadeInUp 3s ease-in-out;
+}
+
+.hidden-wishes {
+    display: none;
+    margin-top: 20px;
+    font-family: 'Bangers'; 
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.hidden-wishes ul {
+    list-style-type: none;
+    padding: 0;
+    color: #FFFFFF; 
+    text-align: center;
+    font-family: 'Bangers';
+    font-size: 0.8em;
+}
+
+.hidden-wishes.visible {
+    display: block;
+    opacity: 0.2;
+}
+
+.closing-message {
+    font-size: 1em;
+    font-family: 'Bangers', cursive; /* Ensure the font is correctly loaded */
+    letter-spacing: 2px;
+    margin-top: 10px;
+    color: #FFF;
+    animation: fadeInUp 5s ease-in-out;
+}
+
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
